@@ -1,6 +1,6 @@
 "use strict";
 /*
- * Copyright (c) 2012, 2016 Carson Cheng. All rights reserved.
+ * Copyright (c) 2012, 2016, 2017 Carson Cheng. All rights reserved.
  * The use and distribution terms for this software are covered by the
  * Eclipse Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php)
  * which can be found in the file EPL-1.0-LICENSE.txt in the LICENSE directory 
@@ -9,9 +9,9 @@
  * You must not remove this notice, or any other, from this software.
  */
 /*
- * cs10 wrapper around gameQuery rev. 0.7.1 startup code
- * hides stuff to make myprogram.js easier to learn
- * this script auto-loads myprogram.js
+ * cs10 wrapper around gameQuery rev. 0.7.1 startup code.
+ * hides stuff to make myprogram.js easier to learn.
+ * this script auto-loads myprogram.js.
  */
 
 $(function () {
@@ -92,8 +92,8 @@ $(function () {
     };
 
     // main
-    var cs10libname = "cs10-0.7.1-0.4.5.js";
-    var gitTag = "v5.7";
+    var cs10libname = "cs10-0.7.1-0.5.0.js";
+    var gitTag = "v5.8";
     loadRsrc(loadScript, cs10libname,
              "https://gitcdn.xyz/repo/ccheng/JQGQ-Project-Template/" + gitTag + "/js/libs/" + cs10libname,
              "js/libs/" + cs10libname, function(){

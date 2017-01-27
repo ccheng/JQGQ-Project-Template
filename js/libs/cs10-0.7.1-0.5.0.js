@@ -1,6 +1,6 @@
 "use strict";
 /*
- * Copyright (c) 2012, 2016 Carson Cheng. All rights reserved.
+ * Copyright (c) 2012, 2016, 2017 Carson Cheng. All rights reserved.
  * The use and distribution terms for this software are covered by the
  * Eclipse Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php)
  * which can be found in the file EPL-1.0-LICENSE.txt in the LICENSE directory 
@@ -9,9 +9,9 @@
  * You must not remove this notice, or any other, from this software.
  */
 /*
- * cs10 wrapper around gameQuery rev. 0.7.1
- * makes things more procedural
- * load this after gameQuery
+ * cs10 wrapper around gameQuery rev. 0.7.1.
+ * makes things more procedural.
+ * load this after gameQuery.
  */
 
 var GQ_DEBUG = true;
@@ -555,7 +555,21 @@ var getMouseButton3 = function () {
 
 var disableContextMenu = function () {
     // see also: https://stackoverflow.com/questions/4920221/jquery-js-prevent-right-click-menu-in-browsers
-    $("#playground").contextmenu(function(){return false;});
+    //$("#playground").contextmenu(function(){return false;});
+    $("#playground").on("contextmenu.cs10", function () {
+        return false;
+    });
+};
+var enableContextMenu = function () {
+    // see also: https://stackoverflow.com/questions/4920221/jquery-js-prevent-right-click-menu-in-browsers
+    $("#playground").off("contextmenu.cs10");
+};
+
+var hideMouseCursor = function () {
+    $("#playground").css("cursor","none");
+};
+var showMouseCursor = function () {
+    $("#playground").css("cursor","default");
 };
 
 

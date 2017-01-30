@@ -95,7 +95,7 @@ $(function () {
     var cs10libname = "cs10-0.7.1-0.5.0.js";
     var gitTag = "v5.8";
     loadRsrc(loadScript, cs10libname,
-             "https://gitcdn.xyz/repo/ccheng/JQGQ-Project-Template/" + gitTag + "/js/libs/" + cs10libname,
+             "https://gitcdn.xyz/cdn/ccheng/JQGQ-Project-Template/" + gitTag + "/js/libs/" + cs10libname, // use gitcdn.xyz/cdn instead of /repo to get specific hash instead of latest commit
              "js/libs/" + cs10libname, function(){
              // GitCDN will take up to 2 hours to propagate file changes
         //consolePrint("Using: " + cs10libname);
